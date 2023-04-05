@@ -10,7 +10,7 @@ import CodeMirror from "codemirror";
 import "codemirror/addon/lint/lint.css";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/rubyblue.css"; // 主题显示，可以百度搜索其他的主题
-require("script-loader!jsonlint");
+// require("script-loader!jsonlint");
 import "codemirror/mode/javascript/javascript";
 import "codemirror/addon/lint/lint";
 import "codemirror/addon/lint/json-lint";
