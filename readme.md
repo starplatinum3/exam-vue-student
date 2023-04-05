@@ -1,6 +1,12 @@
 
 git remote -v
 
+
+d:
+cd  D:\proj\bishe\exam-vue-student
+npm run serve
+
+
 npm run  serve
 npm run  build
 
@@ -16,6 +22,7 @@ git add .
 git commit -m "student build"
 git push origin master
 
+D:\proj\bishe\exam-vue-student
 儿子 ifrme
 
 父亲 界面要往iframe 里面postmessage，有跨域问题

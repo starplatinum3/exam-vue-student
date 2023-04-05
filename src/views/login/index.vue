@@ -11,9 +11,12 @@
             <p>考试系统</p>
             http://localhost:8003/api/all/getAllURL
     <el-button @click="getAllURL">getAllURL</el-button>
-
+    <el-button @click="G6TreeTestGo">G6TreeTestGo</el-button>
+    <!-- test-sys -->
+    <!-- G6TreeTest -->
     <el-button type="" @click="setUserInfoOMaiE">setUserInfoOMaiE</el-button>
 
+    <!-- test-sys -->
 
             <div class="lowin-group">
               <label>用户名 </label>
@@ -98,7 +101,10 @@ export default {
     // window.removeEventListener('storage', this.afterQRScan)
   },
   methods: {
+    G6TreeTestGo(){
 
+      this.$router.push({ path: '/test-sys/G6TreeTest' })
+    },
     getAllURL(){
 
       allApi.getAllURL().then(response => {

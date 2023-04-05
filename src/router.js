@@ -49,6 +49,13 @@ const router = new Router({
       path: '/test-sys',
       component: Layout,
       children: [
+        // D:\proj\bishe\exam-vue-student\src\views\G6TreeTest.vue
+        {
+          path: 'G6TreeTest',
+          component: () => import('@/views/G6TreeTest'),
+          name: 'G6TreeTest',
+          meta: { title: 'G6TreeTest' }
+        },
         {
           path: 'index',
           component: () => import('@/views/test-sys/index'),
