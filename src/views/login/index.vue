@@ -12,6 +12,8 @@
             http://localhost:8003/api/all/getAllURL
     <el-button @click="getAllURL">getAllURL</el-button>
     <el-button @click="G6TreeTestGo">G6TreeTestGo</el-button>
+        <el-button @click="testSysGo">test-sys-go</el-button>
+
     <!-- test-sys -->
     <!-- G6TreeTest -->
     <el-button type="" @click="setUserInfoOMaiE">setUserInfoOMaiE</el-button>
@@ -101,6 +103,9 @@ export default {
     // window.removeEventListener('storage', this.afterQRScan)
   },
   methods: {
+    testSysGo(){
+      this.$router.push({ path: '/test-sys/index' })
+    },
     G6TreeTestGo(){
 
       this.$router.push({ path: '/test-sys/G6TreeTest' })

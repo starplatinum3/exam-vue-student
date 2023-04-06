@@ -6,7 +6,8 @@
     <!-- '100%' -->
     <div class="flexRow">
       <div class="flexCol g6Part">
-        <el-button type="" @click="getCode">getCode</el-button>
+        <!-- getCode -->
+        <el-button type="" @click="getCode">代码编译</el-button>
         
         <!-- onClose -->
         <el-button type="" @click="onClose">保存并关闭</el-button>
@@ -47,7 +48,7 @@ import NodeUtil from "@/utils/NodeUtil";
 import G6Util from "@/utils/G6Util";
 import TreeUtil from "@/utils/TreeUtil";
 
-import CodeMirrorEditorBlack from "@/components/CodeMirrorEditorBlack";
+// import CodeMirrorEditorBlack from "@/components/CodeMirrorEditorBlack";
 import JsonCodeMirror from "@/components/JsonCodeMirror";
 
 // D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\views\CodeMirrorItTest.vue
@@ -136,7 +137,7 @@ export default {
     };
   },
   components: {
-    CodeMirrorEditorBlack,
+    // CodeMirrorEditorBlack,
     JsonCodeMirror,
   },
   mounted() {

@@ -6,12 +6,17 @@
   <el-button type="" @click="DrawIoGo">DrawIoGo</el-button>
    <el-button type="" @click="toWebsocketPage">toWebsocketPage</el-button>
 <!--   D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\WebsocketPage.vue-->
+<el-button type="" @click="G6TreeTest">G6TreeTest</el-button>
+<!-- testSysGo -->
+<!-- G6TreeTestGetVal -->
+<el-button type="" @click="G6TreeTestGetVal">G6TreeTestGetVal</el-button>
 
+<!-- D:\proj\bishe\exam-vue-student\src\views\G6TreeTest.vue -->
 <el-button type="" @click="toChatRoom">toChatRoom</el-button>
 <!-- D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\ChatRoom.vue -->
   D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys\index.vue
   java
-
+  
   <!-- http://localhost:9555/api/file/list -->
   <el-button type="" @click="file_list">file_list</el-button>
   <div>
@@ -115,7 +120,14 @@ export default {
 
   },
   methods: {
-   
+    G6TreeTest(){
+this.$router.push({ path: "/test-sys/G6TreeTest" });
+    
+    },
+    G6TreeTestGetVal(){
+this.$router.push({ path: "/test-sys/G6TreeTestGetVal" });
+    },
+    
     file_download_url(id){
      return  `${common.fileServerBaseUrl}/api/file/download/${id}?pageNo=${1}&pageSize=${10}`
     },
