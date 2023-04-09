@@ -15,8 +15,18 @@
         <el-button type="" @click="onCloseNotSave">关闭不保存</el-button>
 
         <!-- :style="{ height: '800px', width: '70%' }"  -->
-        <div id="container" :style="{ height: '800px', width: '700px' }"></div>
+        <!-- id="container" -->
+        <!-- containerG6Tree -->
+        <!-- G6TreeId -->
+        <!-- :id="G6TreeId" -->
+        <!-- style="z-index:100" -->
+        <div 
+        id="containerG6Tree"
+   style="z-index:99"
+  :style="{ height: '800px', width: '700px', }"></div>
+
       </div>
+        <!-- z-index:100 -->
 
       <!-- style="height: 200px; width: 600px" -->
       <!-- <textarea
@@ -76,7 +86,9 @@ export default {
     data:""
   },
   data() {
+    // let G6TreeId="containerG6Tree"
     return {
+      G6TreeId:"containerG6Tree",
       editor: null,
       code: "//按Ctrl键进行代码提示",
       JsonCodeMirrorShow:false,
@@ -316,14 +328,29 @@ export default {
         }
     }
 }
+
+console.log("this.data")
+console.log(this.data);
+    // this.data=  JSON.stringify(mockTreeDataList)
+    // this.data=  JSON.stringify(treeDataOfDepth)
 // this.JsonCodeMirrorData=treeDataOfDepth
 
-    if(!this.data||this.data=="{}"||this.data==""){
+// let G6TreeId="containerG6Tree"
+// let G6TreeId="containerG6Tree"
+let G6TreeId=this.G6TreeId
+
+let  drawData=treeDataOfDepth
+// "text" in this.data
+// "text" in 
+// includes () 
+    if(!this.data||this.data=="{}"||this.data==""||this.data.includes("text")){
       // this.data="{}"
       // this.data=  JSON.stringify(this.JsonCodeMirrorData)
       this.JsonCodeMirrorData=treeDataOfDepth
       this.mode="g6Tree"
-      this.graph=   G6Util.showChartG6Tree("container",this.JsonCodeMirrorData)
+      drawData =this.JsonCodeMirrorData
+      // this.graph=   G6Util.showChartG6Tree("container",this.JsonCodeMirrorData)
+  
 
       // this.data=  JSON.stringify(mockTreeDataList)
     }else if (this.data.startsWith("[")){
@@ -331,16 +358,24 @@ export default {
       let treeData=NodeUtil.changeTreeData(this.JsonCodeMirrorData)
 
     let treeData0= treeData[0]
-     
-      this.graph=   G6Util.showChartG6Tree("container",treeData0)
+    drawData=treeData0
+      // this.graph=   G6Util.showChartG6Tree("container",treeData0)
       this.mode="indexTree"
 
     }
     else{
       this.JsonCodeMirrorData=JSON.parse(this.data)
-      this.graph=   G6Util.showChartG6Tree("container",this.JsonCodeMirrorData)
+      drawData= this.JsonCodeMirrorData
+      // this.graph=   G6Util.showChartG6Tree("container",this.JsonCodeMirrorData)
       this.mode="g6Tree"
     }
+    console.log("drawData");
+    console.log(drawData);
+    this.graphDestroyAndDraw(drawData)
+    // this.graphDestroyAndDraw(treeDataToshow)
+
+    // this.graph?.destroy()
+    // this.graph=   G6Util.showChartG6Tree(G6TreeId,drawData)
 
 
 //     let getTreedata=   JSON.parse(this.data)
@@ -373,6 +408,11 @@ export default {
     this.JsonCodeMirrorShow=true
   },
   methods: {
+    graphDestroyAndDraw(drawData){
+      document.getElementById(this.G6TreeId).innerHTML = "";
+      this.graph?.destroy()
+    this.graph=   G6Util.showChartG6Tree(this.G6TreeId,drawData)
+    },
     onChanged(){
 
       this.getCode()
@@ -577,7 +617,8 @@ export default {
 let  treeDataToshow=height3Tree
 // let  treeDataToshow=treeData0
 
-this.graph=   G6Util.showChartG6Tree("container",treeDataToshow)
+this.graphDestroyAndDraw(treeDataToshow)
+// this.graph=   G6Util.showChartG6Tree("container",treeDataToshow)
 
 // this.graph=   G6Util.showChartG6Tree("container",treeData[0])
     // this.changeTreeData();
@@ -673,7 +714,10 @@ this.graph=   G6Util.showChartG6Tree("container",treeDataToshow)
       // let treeData=NodeUtil.changeTreeData(this.getTreedata)
       let treeData=NodeUtil.changeTreeData(getTreedata)
 
-      this.graph=   G6Util.showChartG6Tree("container",treeData[0])
+      // container
+      // this.containerG6Tree
+      this.graphDestroyAndDraw(treeData[0])
+      // this.graph=   G6Util.showChartG6Tree( this.G6TreeId,treeData[0])
            //初始化数据
           //  graph.data(data);
           // let  treeData0=treeData[0]
@@ -721,8 +765,10 @@ this.graph=   G6Util.showChartG6Tree("container",treeDataToshow)
       // let treeData=NodeUtil.changeTreeData(this.getTreedata)
       // let treeData=NodeUtil.changeTreeData(getTreedata)
       // this.graph=   G6Util.showChartG6Tree("container",treeData[0])
+      this.graphDestroyAndDraw(getTreedata)
+      // this.graph=   G6Util.showChartG6Tree(  this.G6TreeId,getTreedata)
 
-      this.graph=   G6Util.showChartG6Tree("container",getTreedata)
+      // this.graph=   G6Util.showChartG6Tree("container",getTreedata)
            //初始化数据
           //  graph.data(data);
           // let  treeData0=treeData[0]
@@ -884,6 +930,7 @@ this.graph=   G6Util.showChartG6Tree("container",treeDataToshow)
 <style scoped>
 .g6Part {
   width: 1000px;
+  z-index:100;
 }
 .flexCol {
   /* width: 1000px; */

@@ -1061,12 +1061,21 @@
 
                     <input type="hidden" name="content" id="answer" />
                     <!-- type="submit" -->
+                    <!-- drawIoShowingToggle -->
                     <input
+                      @click="drawIoShowingToggle"
+                      name="button"
+                      class="btn btn-primary"
+                      value="画流程图"
+                    />
+
+                      <!-- <input
                       @click="iframeDocShowDo"
                       name="button"
                       class="btn btn-primary"
                       value="iframeDocShowingToggle"
-                    />
+                    /> -->
+
                     <input
                       @click="prevProblem"
                       name="button"
@@ -2103,6 +2112,30 @@
         <!-- src="http://localhost:3001" -->
         <!-- 2301 drawio -->
       </el-dialog>
+
+      <el-dialog
+      top="10px"
+      class="dialogG6Editor"
+      :visible.sync="dialogVisibleEditorG6Code"
+      append-to-body
+      :close-on-click-modal="false"
+      width="1300px"
+      height="1200px"
+      :show-close="false"
+      center
+    >
+   
+      <G6Tree @onClose="onCloseG6Tree" 
+      
+      @onCloseNotSave="onCloseNotSaveG6Tree" 
+      @exportData="exportData" :data="drawIoStr"></G6Tree>
+    </el-dialog>
+    <!-- drawIoStr -->
+    <!-- :data="answer.answerItems[questionItemIdx].drawIo" -->
+
+    <el-button type="" @click="toSetDrawPageG6Editor">用编辑器设计流程图</el-button>
+
+
     </div>
   </div>
 </template>
@@ -2118,6 +2151,33 @@
 //   require("codemirror/mode/sql/sql");
 //   require("codemirror/addon/hint/show-hint");
 //   require("codemirror/addon/hint/sql-hint");
+
+import "codemirror/theme/ambiance.css";
+import "codemirror/lib/codemirror.css";
+import "codemirror/addon/hint/show-hint.css";
+// D:\proj\bishe\exam-vue-admin3\src\components\CodeMirrorEditorBlack.vue
+
+let CodeMirror = require("codemirror/lib/codemirror");
+require("codemirror/addon/edit/matchbrackets");
+require("codemirror/addon/selection/active-line");
+require("codemirror/mode/sql/sql");
+require("codemirror/addon/hint/show-hint");
+require("codemirror/addon/hint/sql-hint");
+// D:\proj\bishe\exam-vue-student\src\views\G6TreeTest.vue
+
+import G6 from "@antv/g6";
+// D:\proj\bishe\exam-vue-admin3\src\utils\CodeMirrorUtil.js
+import CodeMirrorUtil from "@/utils/CodeMirrorUtil";
+import NodeUtil from "@/utils/NodeUtil";
+
+import G6Util from "@/utils/G6Util";
+
+// import {throttle} from "@/utils/throttle";
+import {throttle} from "@/utils/tools";
+
+import "codemirror/lib/codemirror.css";
+import "codemirror/mode/xml/xml"; // xml编辑器模式
+import "codemirror/theme/monokai.css"; // 主题
 
 import { mapState, mapGetters } from "vuex";
 import { formatSeconds } from "@/utils";
@@ -2150,7 +2210,7 @@ import JavaScriptDemoVue from "../../JavaScriptDemo.vue";
 import common from "@/utils/common";
  
 import ObjUtil from "@/utils/ObjUtil";
-
+import G6Tree from "@/components/G6Tree";
 // ————————————————
 // 版权声明：本文为CSDN博主「啾酱」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 // 原文链接：https://blog.csdn.net/qq_44818275/article/details/126142915
@@ -2162,16 +2222,20 @@ export default {
     JavaScriptDemoVue,
     QuestionEditNowCoder,
     DrawIo,
+    G6Tree,
   },
   data() {
+      
     // 43.142.150.223
     // let  docUrl="http://43.142.150.223:2301"
     let  docUrl="http://43.142.150.223:2323"
 
     return {
+      dialogVisibleEditorG6Code:false,
       docUrl:docUrl,
       iframeWin:null,
       debug:true,
+      // debug:false,
       drawIoShowing: false,
       iframeDocShowing: false,
       questionItemIdx: 0,
@@ -2243,6 +2307,7 @@ export default {
       },
       timer: null,
       remainTime: 0,
+      drawIoStr:null,
     };
   },
   created() {
@@ -2300,6 +2365,9 @@ export default {
     this.initData();
     this.initVueApp();
     this.btnTakePhotoClicked();
+    // this. drawIoStr=JSON.stringify(
+    //   this.answer.answerItems[this.questionItemIdx].drawIo
+    // )
   },
 
   beforeDestroy() {
@@ -2307,6 +2375,32 @@ export default {
     this.stopVideo();
   },
   methods: {
+
+    toSetDrawPageG6Editor(){
+      this.dialogVisibleEditorG6Code=true
+    },
+    onCloseG6Tree(JsonCodeMirrorVal){
+      // this.$emit('onClose',JsonCodeMirrorVal)
+
+      console.log("JsonCodeMirrorVal onCloseG6Tree");
+      console.log(JsonCodeMirrorVal);
+      let  nowEditAns=
+      this.answer.answerItems[this.questionItemIdx]
+      nowEditAns.drawIo=JsonCodeMirrorVal
+      // this.form.g6Tree=JsonCodeMirrorVal
+      this.dialogVisibleEditorG6Code=false
+    },
+    onCloseNotSaveG6Tree(JsonCodeMirrorVal){
+      this.dialogVisibleEditorG6Code=false
+    },
+    exportData(data) {
+      console.log(data);
+    },
+    onClose() {
+      // onClose
+      // onClose
+      this.richEditor.dialogVisibleEditor = false;
+    },
     sendMegToIframe(data) {
       // 向iframe传值
       // console.log("this.$refs");
@@ -2547,6 +2641,7 @@ console.log("sendMegToIframe to  firame");
             _this.remainTime=111111111111
           }
          
+      
           _this.initAnswer();
           _this.timeReduce();
           _this.formLoading = false;
@@ -2721,6 +2816,10 @@ console.log("sendMegToIframe to  firame");
           // console.log(this.answer.answerItems);
         }
       }
+
+      this. drawIoStr=JSON.stringify(
+      this.answer.answerItems[this.questionItemIdx].drawIo
+    )
     },
     nextProblem() {
       console.log("this.questionItemIdx");

@@ -27,7 +27,9 @@ module.exports = {
       '/api': {
         // target: 'http://localhost:8000',
         // target: 'http://localhost:8001',
-        target: 'http://localhost:8003',
+        
+        target: 'http://43.142.150.223:8003',
+        // target: 'http://localhost:8003',
         // 这是 打包了之后的配置吗
         changeOrigin: true
       }

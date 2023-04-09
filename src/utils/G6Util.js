@@ -178,10 +178,20 @@ export function renderMap(data,graph){
 
   // D:\proj\bishe\exam-vue-admin3\src\utils\G6Util.js
  let  G6Util={
+  showChartG6Tree(containerId,data){
+    this.showChartG6TreeDo(containerId,data)
+    // setTimeout(() => {
+    //   this.showChartG6TreeDo(containerId,data)
+    // }, 3000);
+    // showChartG6TreeDo()
+  },
     //生成树图
-    showChartG6Tree(containerId,data) {
+    showChartG6TreeDo(containerId,data) {
       // const data = this.treedata[0];
       const container = document.getElementById(containerId);
+
+      console.log("container");
+      console.log(container);
 
       // const container = document.getElementById("container");
       if (container) {
@@ -277,10 +287,18 @@ export function renderMap(data,graph){
             },
           };
         });
+        console.log('初始化数据');
+        console.log("data");
+        console.log(data);
+
         //初始化数据
         graph.data(data);
         //渲染视图
+        console.log('渲染视图');
+
         graph.render();
+        console.log('让画布内容适应视口');
+
         //让画布内容适应视口
         graph.fitView();
         // this.graph=graph

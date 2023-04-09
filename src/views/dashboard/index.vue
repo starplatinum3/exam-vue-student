@@ -285,11 +285,14 @@
                 <!---->
               </li>
               <li class="hover-class nc-nav-header-menuitem" data-v-2a49ace6="">
+                <!-- test-sys -->
+                <!-- href="#https://ac.nowcoder.com/acm/home" -->
+                <!-- >竞赛</a -->
                 <a
-                  href="https://ac.nowcoder.com/acm/home"
+                  href="#/test-sys/index"
                   data-v-2a49ace6=""
                   class=""
-                  >竞赛</a
+                  >测试</a
                 >
                 <div
                   class="line"

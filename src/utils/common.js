@@ -12,7 +12,11 @@ let ip = urlStr[2].split(':')[0]
 // let ip='43.142.150.223'
 // const port = '8889'
 // let examPort="8000"
-let examPort="8003"
+// host: 'localhost',
+// port: 8001,
+// let examPort="8003"
+let examPort="8001"
+
 // let examPort="8083"
 
 // const port = '7001'

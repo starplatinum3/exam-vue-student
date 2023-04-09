@@ -85,7 +85,7 @@
       <video :src="answer.videoLink"></video>
       <div class="q-title" v-html="question.title" />
       <!-- doDrawIoWork -->
-      <el-button type="" @click="doDrawIoWork">进行画图</el-button>
+      <!-- <el-button type="" @click="doDrawIoWork">进行画图</el-button> -->
       <el-button type="" @click="docShow">编辑答案</el-button>
       <!-- // docShow -->
 
@@ -124,7 +124,7 @@
      <!-- src="http://localhost:3001" -->
     <!-- docUrl -->
 
-    <el-button type="" @click="sendData">sendData</el-button>
+    <!-- <el-button type="" @click="sendData">sendData</el-button> -->
   </div>
 </template>
 
