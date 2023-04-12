@@ -2152,6 +2152,10 @@
 //   require("codemirror/addon/hint/show-hint");
 //   require("codemirror/addon/hint/sql-hint");
 
+import eventBus from "@/utils/eventBus";
+// import G6Editor from './components/G6Editor'
+// import G6Editor from '@/components/G6Editor'
+import G6Editor from '@/components/G6Editor/index'
 import "codemirror/theme/ambiance.css";
 import "codemirror/lib/codemirror.css";
 import "codemirror/addon/hint/show-hint.css";
@@ -2223,6 +2227,7 @@ export default {
     QuestionEditNowCoder,
     DrawIo,
     G6Tree,
+    G6Editor,
   },
   data() {
       
@@ -2311,6 +2316,10 @@ export default {
     };
   },
   created() {
+    eventBus.$on('exportData', (data) => {
+      console.log("data exportData emit")
+      console.log(data)
+    })
     // setTimeout(() => {
     //   this.$refs.codemirrorCode.refresh();
     // }, 1);
@@ -2375,6 +2384,11 @@ export default {
     this.stopVideo();
   },
   methods: {
+
+    // exportData(data){
+    //   console.log("data exportData")
+    //   console.log(data)
+    // },
 
     toSetDrawPageG6Editor(){
       this.dialogVisibleEditorG6Code=true
