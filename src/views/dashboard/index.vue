@@ -42,9 +42,11 @@
               data-v-2a49ace6=""
               data-v-5598cced=""
             >
+            <!-- href="#/record/index" -->
+            <!-- href="https://www.nowcoder.com/landing" -->
               <li class="hover-class nc-nav-header-menuitem" data-v-2a49ace6="">
                 <a
-                  href="https://www.nowcoder.com/landing"
+                  href="#/index"
                   data-v-2a49ace6=""
                   class=""
                   >首页</a

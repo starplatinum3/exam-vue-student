@@ -229,14 +229,14 @@ this.answer.drawIo=JSON.parse(this.answer.drawIo);
 
 <style scoped>
 .questionsContain{
-  background-color: beige;
+  /* background-color: beige; */
 }
 .questionsRadio{
-  background-color: azure;
+  /* background-color: azure; */
 }
 
 .questionsRadioGroup{
-  background-color: green;
+  /* background-color: green; */
 }
 
 
