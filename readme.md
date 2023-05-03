@@ -7,6 +7,10 @@ cd  D:\proj\bishe\exam-vue-student
 npm run serve
 
 
+d:
+cd  D:\proj\bishe\exam-vue-student
+npm run  build
+
 npm run  serve
 npm run  build
 
