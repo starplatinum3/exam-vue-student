@@ -1,5 +1,5 @@
 d:
-cd D:\proj\springBoot\xzs-mysql\source\vue\xzs-student
+cd D:\proj\bishe\exam-vue-student
 npm run  build
 @REM cd D:\proj\bishe\exam-vue-admin3
 cd D:\proj\springBoot\exam-sys-db2

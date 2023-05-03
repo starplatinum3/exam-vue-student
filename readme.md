@@ -15,11 +15,11 @@ npm run  serve
 npm run  build
 
 d:
-cd D:\proj\springBoot\xzs-mysql\source\vue\xzs-student
+cd D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student
 npm run serve
 
 d:
-cd D:\proj\springBoot\xzs-mysql\source\vue\xzs-student
+cd D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student
 npm run  build
 cd D:\proj\bishe\exam-vue-admin3
 git add . 
@@ -33,7 +33,7 @@ D:\proj\bishe\exam-vue-student
 iframe 往父亲就没有
 
 d:
-cd D:\proj\springBoot\xzs-mysql\source\vue\xzs-student
+cd D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student
 npm run  build
 cd D:\proj\springBoot\exam-sys-db2
 git add . 
@@ -41,7 +41,7 @@ git commit -m "student build"
 git push origin master
 pause
 
-D:\proj\springBoot\xzs-mysql\source\vue\xzs-student>npm run serve
+D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student>npm run serve
 
 npm install vue-codemirror --save
 

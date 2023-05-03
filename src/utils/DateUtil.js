@@ -50,7 +50,7 @@ export function formatDate(date) {
 
   console.log(formatDateNumberGang);
 
-//   D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin>node test
+//   D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin>node test
 // 2018-11-30
    * @param {*} numb 
    * @param {*} format 

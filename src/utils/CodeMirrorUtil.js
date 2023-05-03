@@ -1,4 +1,4 @@
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\views\CodeMirrorItTest.vue
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\views\CodeMirrorItTest.vue
 import "codemirror/theme/ambiance.css";
 import "codemirror/lib/codemirror.css";
 import "codemirror/addon/hint/show-hint.css";

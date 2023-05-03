@@ -1,5 +1,5 @@
 import G6 from "@antv/g6/build/g6";
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\node_modules\_@antv_g6@2.2.6@@antv\g6\build
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\node_modules\_@antv_g6@2.2.6@@antv\g6\build
 import hoverNode from './hover-node'
 import addLine from './add-edge'
 import dragItem from './drag-item'

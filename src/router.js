@@ -44,7 +44,7 @@ const router = new Router({
         }
       ]
     },
-    // D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys\index.vue
+    // D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\test-sys\index.vue
     {
       path: '/test-sys',
       component: Layout,
@@ -88,8 +88,8 @@ const router = new Router({
           meta: { title: 'ChatRoom' }
         },
         
-        // D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\WebsocketPage.vue
-        // D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\DrawIo.vue
+        // D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\WebsocketPage.vue
+        // D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\DrawIo.vue
       ]
     },
 

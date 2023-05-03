@@ -104,7 +104,7 @@
 <script>
 
 import SnowflakeId from "snowflake-id";
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\node_modules\snowflake-id\lib\snowflake-id.js
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\node_modules\snowflake-id\lib\snowflake-id.js
 const snowflake = new SnowflakeId({
     mid: 42,
     offset: (2019 - 1970) * 31536000 * 1000

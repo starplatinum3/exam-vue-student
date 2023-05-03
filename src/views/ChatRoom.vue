@@ -17,7 +17,7 @@ import Stomp from "webstomp-client";
 // import WS from "../js/webscoket/WS";
 import WS from "@/utils/WS";
 import common from "@/utils/common";
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\utils\WS.js
+// D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\utils\WS.js
 export default {
   name: "ChatRoom",
   data() {

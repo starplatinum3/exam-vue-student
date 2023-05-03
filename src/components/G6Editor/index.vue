@@ -33,7 +33,7 @@ import command from "@/command";
 import NodeUtil from "@/utils/NodeUtil";
 import ListUtil from "@/utils/ListUtil";
 // NodeUtil
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\utils\NodeUtil.js
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\utils\NodeUtil.js
 export default {
   name: "G6Editor",
   components: {

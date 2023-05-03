@@ -1310,7 +1310,7 @@ let tableNameExcelColsMap={
  
 
  
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\utils\dictData.js
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\utils\dictData.js
 export function getProperties(type){
   console.log("type");
   console.log(type);

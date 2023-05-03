@@ -6,8 +6,8 @@
       style="background: #f7f8f9"
       data-v-540a318c=""
     >
-    <!-- D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys -->
-    <!-- D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys -->
+    <!-- D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\test-sys -->
+    <!-- D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\test-sys -->
     <!-- <el-button type="" @click='test_sys_go'>test_sys_go</el-button> -->
     <!-- <el-button type="" @click='record_index_Go'>record_index_Go</el-button> -->
     <!-- '/test/summary' to  1 -->
@@ -8966,7 +8966,7 @@ export default {
   },
   methods: {
     toHistory(){
-      // D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\record
+      // D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\record
       this.$router.push({ path: "/record/index" });
     },
     test_sys_go(){

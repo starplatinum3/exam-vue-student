@@ -39,7 +39,7 @@ import G6Util from "@/utils/G6Util";
 // import CodeMirrorEditorBlack from "@/components/CodeMirrorEditorBlack";
 import JsonCodeMirror from "@/components/JsonCodeMirror";
 // D:\proj\bishe\exam-vue-admin3\src\views\G6Tree.vue
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\views\CodeMirrorItTest.vue
+// D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\views\CodeMirrorItTest.vue
 import "codemirror/theme/ambiance.css";
 import "codemirror/lib/codemirror.css";
 import "codemirror/addon/hint/show-hint.css";

@@ -93,7 +93,7 @@ const Global={
     backendHttp,
     docUrl
 }
-// D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\utils\common.js
+// D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\utils\common.js
 // export Global
 
 

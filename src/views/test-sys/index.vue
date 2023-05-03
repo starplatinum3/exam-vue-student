@@ -1,11 +1,11 @@
 <template>
- <!-- D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys\index.vue -->
+ <!-- D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\test-sys\index.vue -->
 
  <div>
-  D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\DrawIo.vue
+  D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\DrawIo.vue
   <el-button type="" @click="DrawIoGo">DrawIoGo</el-button>
    <el-button type="" @click="toWebsocketPage">toWebsocketPage</el-button>
-<!--   D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\WebsocketPage.vue-->
+<!--   D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\WebsocketPage.vue-->
 <el-button type="" @click="G6TreeTest">G6TreeTest</el-button>
 <!-- testSysGo -->
 <!-- G6TreeTestGetVal -->
@@ -13,8 +13,8 @@
 
 <!-- D:\proj\bishe\exam-vue-student\src\views\G6TreeTest.vue -->
 <el-button type="" @click="toChatRoom">toChatRoom</el-button>
-<!-- D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\ChatRoom.vue -->
-  D:\proj\springBoot\xzs-mysql\source\vue\xzs-student\src\views\test-sys\index.vue
+<!-- D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\ChatRoom.vue -->
+  D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student\src\views\test-sys\index.vue
   java
   
   <!-- http://localhost:9555/api/file/list -->

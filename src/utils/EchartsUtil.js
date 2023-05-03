@@ -1,7 +1,7 @@
 
 // import 
 export function  showEchartsById(names, datas,showStuEchartsId) {
-  // D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\utils\EchartsUtil.js
+  // D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\utils\EchartsUtil.js
     console.log("names");
     console.log(names);
     console.log("datas");
@@ -55,7 +55,7 @@ conf.title,
  */
 //  names, datas,showStuEchartsId
 export function  showEchartsByConf(conf,) {
-  // D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\utils\EchartsUtil.js
+  // D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\utils\EchartsUtil.js
  let names=conf.names;
  let  datas=conf.datas;
   let  echartsId=conf.echartsId;
@@ -100,7 +100,7 @@ export function  showEchartsByConf(conf,) {
   
 // import 
 export function  showEchartsByConfSeries(conf,names, datas,showStuEchartsId) {
-  // D:\proj\springBoot\xzs-mysql\source\vue\xzs-admin\src\utils\EchartsUtil.js
+  // D:\proj\springBoot\exam-vue-student\source\vue\xzs-admin\src\utils\EchartsUtil.js
   names=conf.names;
   datas=conf.datas;
   let  echartsId=conf.echartsId;
