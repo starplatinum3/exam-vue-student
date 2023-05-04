@@ -5,8 +5,8 @@
        <el-col :span="18">
          <el-table v-loading="listLoading" :data="tableData" fit highlight-current-row 
          style="width: 100%" @row-click="itemSelect">
-           <el-table-column prop="id" label="序号" width="90px"/>
-           <el-table-column prop="paperName" label="名称"  />
+           <el-table-column  sortable prop="id" label="序号" width="90px"/>
+           <el-table-column  sortable prop="paperName" label="名称"  />
            <!-- width="70" -->
            <el-table-column sortable prop="subjectName" label="学科"  width="100" />
            <el-table-column sortable  label="状态" prop="status" width="100px">
@@ -16,7 +16,7 @@
                </el-tag>
              </template>
            </el-table-column>
-           <el-table-column prop="createTime" label="做题时间"  width="170" />
+           <el-table-column  sortable prop="createTime" label="做题时间"  width="170" />
            <el-table-column  align="right" width="70">
              <template slot-scope="{row}">
               <!-- 学生不该有批改的权限呀 -->

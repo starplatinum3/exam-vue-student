@@ -5,21 +5,33 @@
       <el-carousel :interval="5000" arrow="always" type="card">
         <el-carousel-item>
           <!-- 点击图片 去一个新的页面 ，vue  -->
+           <!-- src="@/assets/carousel/1.png" -->
+           <!-- src="@/assets/carousel/1.png" -->
+           <!-- src="@/assets/carousel/1.png" -->
+           <!-- "D:\download\books.jpg" -->
           <img
             href="https://www.bilibili.com/"
             @click="goToWeb"
-            src="@/assets/carousel/1.png"
+         
+            src="http://139.196.8.79/images/books.jpg"
             class="carousel-img"
           />
+          <!-- "D:\miku_sleep.jpg" -->
         </el-carousel-item>
         <el-carousel-item>
-          <img src="@/assets/carousel/2.png" class="carousel-img" />
+          <!-- /home/mqp/image/images/do_homework.jpg -->
+          <!-- <img src="@/assets/carousel/2.png" class="carousel-img" /> -->
+          <img src="http://139.196.8.79/images/do_homework.jpg" class="carousel-img" />
         </el-carousel-item>
         <el-carousel-item>
-          <img src="@/assets/carousel/3.png" class="carousel-img" />
+          <!-- "D:\download\many_tables.jpg" -->
+          <img src="http://139.196.8.79/images/many_tables.jpg" class="carousel-img" />
+          <!-- <img src="@/assets/carousel/3.png" class="carousel-img" /> -->
         </el-carousel-item>
         <el-carousel-item>
-          <img src="@/assets/carousel/4.png" class="carousel-img" />
+          <!-- "D:\download\computer_learn_book.jpg" -->
+          <img src="http://139.196.8.79/images/computer_learn_book.jpg" class="carousel-img" />
+          <!-- <img src="@/assets/carousel/4.png" class="carousel-img" /> -->
         </el-carousel-item>
       </el-carousel>
     </el-row>
@@ -130,7 +142,7 @@
     <!--      <NiuKeExam :exam="item"></NiuKeExam>-->
     <!--    </div>-->
 
-    <el-select v-model="value" placeholder="请选择">
+    <!-- <el-select v-model="value" placeholder="请选择">
       <el-option
         v-for="item in options"
         :key="item.value"
@@ -139,45 +151,14 @@
         :disabled="item.disabled"
       >
       </el-option>
-    </el-select>
+    </el-select> -->
     <!-- 
 作者：毛茸茸的狗
 链接：https://www.jianshu.com/p/77d7af27adc3
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 -->
     <!-- 热度 -->
-    <div class="grid-container">
-      <div
-        class="grid-item examItem hoverUpShaow"
-        v-for="(item, index) in fixedPaper"
-        :key="index"
-      >
-        <div class="flex-row">
-          <img
-            class="exam-pic"
-            src="http://139.196.8.79/images/1578389091149320.jpg"
-          />
-          <!-- src="http://starplatinumora.top/images/1580140396651458.jpg" -->
-          <!-- <div class="align-center-vertical exam-name" >
-            {{item.name}}
-          </div> -->
-
-          <!-- <a  class="align-center-vertical exam-name" 
-          href="http://starplatinumora.top/images/1580140396651458.jpg">{{item.name}}</a>
-       -->
-          <router-link
-            class="align-center-vertical exam-name"
-            target="_blank"
-            :to="{ path: '/do', query: { id: item.id } }"
-          >
-            {{ item.name }}
-            <!-- <el-button type="text" class="button">{{item.name}}</el-button> -->
-          </router-link>
-        </div>
-        <div class="hotNum">2134 huo</div>
-      </div>
-    </div>
-
+  
     <!--    <div-->
     <!--      class="grid-container"-->
     <!--      v-for="(item, index) in fixedPaper"-->
@@ -225,6 +206,8 @@
             </div>
           </el-card>
         </el-col>
+
+        <a class="buttonLink" href="http://139.196.8.79/" target="_blank">做题方法</a>
       </div>
     </el-row>
   </div>
@@ -585,6 +568,25 @@ export default {
 //   color: rgba(116, 116, 116, 1)!important;
 //   border: none;
 // }
+
+.buttonLink {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db; /* 原始颜色为蓝色系 */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+.buttonLink:hover {
+  background-color: #8e44ad; /* 悬停后颜色变为紫色系 */
+}
+
 </style>
 <style>
 /* .el-select:hover .el-input__inner {

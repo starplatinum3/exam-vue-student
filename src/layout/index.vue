@@ -1,12 +1,15 @@
 <template>
   <el-container>
     <el-header height="61" class="student-header">
+      <!-- <a class="navBlue" href="http://139.196.8.79/">做题方法 </a> -->
       <div class="head-user">
+        <a class="navBlue" href="http://139.196.8.79/" target="_blank">做题方法 </a>
         <el-dropdown trigger="click" placement="bottom">
           <el-badge :is-dot="messageCount!==0" >
             <el-avatar  class="el-dropdown-avatar" size="medium"  
             :src="userInfo.imagePath === null ? require('@/assets/avatar.png') : userInfo.imagePath"></el-avatar>
           </el-badge>
+          <!-- <a class="navBlue" href="http://139.196.8.79/">做题方法 </a> -->
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item @click.native="$router.push({path:'/user/index'})">个人中心</el-dropdown-item>
             <el-dropdown-item @click.native="$router.push({path:'/user/message'})">
@@ -18,12 +21,17 @@
             <el-dropdown-item @click.native="logout" divided>退出</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
+
+        <!-- <a class="navBlue" href="http://139.196.8.79/">做题方法 </a> -->
       </div>
       <el-menu class="el-menu-title" mode="horizontal" :default-active="defaultUrl" :router="true">
         <el-menu-item index="/index">首页</el-menu-item>
         <el-menu-item index="/paper/index">试卷中心</el-menu-item>
         <el-menu-item index="/record/index">考试记录</el-menu-item>
         <el-menu-item index="/question/index">错题本</el-menu-item>
+        <!-- index="http://139.196.8.79/" -->
+        <!-- <el-menu-item  href="http://139.196.8.79/">做题方法</el-menu-item> -->
+        
       </el-menu>
       <div class="logo">
         <!-- http://139.196.8.79/images/0194ea5ac1fc33a8012062e3f66904.jpg -->
@@ -35,7 +43,9 @@
     </el-header>
     <el-main class="student-main">
       <router-view/>
+      <!-- <a href="http://139.196.8.79/">做题方法 </a> -->
     </el-main>
+    <!-- <a href="http://139.196.8.79/">做题方法 </a> -->
     <el-footer height="340" class="student-footer">
       <div class="foot-container">
         <!-- <div class="footer-main">
@@ -61,8 +71,10 @@
           <a href="https://ke.qq.com/course/3614230" target="_blank" class="footer-main-link">学之思视频教程</a>
         </div> -->
       </div>
+      <!-- <a href="http://139.196.8.79/">做题方法 </a> -->
     </el-footer>
     <div class="foot-copyright">
+     
       <!-- <span>Copyright © 2021 starplatinumora 版权所有</span> -->
     </div>
   </el-container>
@@ -146,5 +158,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+</style>
+<style scoped>
+.navBlue {
+  display: inline-block;
+  /* margin-top: 20px; */
+  margin-top: 10px;
+  padding: 8px 16px;
+  color: #333; /* 初始颜色为灰色系 */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.navBlue:hover {
+  color: #3498db; /* 鼠标悬停时颜色变为蓝色系 */
+}
 
 </style>

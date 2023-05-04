@@ -92,8 +92,10 @@ https://blog.csdn.net/qq_35462323/article/details/119276258 -->
           :drawIo="answer.drawIo"
         ></DrawIo>
       </el-dialog>
-      <el-button type="" @click="lookDrawIo">lookDrawIo</el-button>
-      <el-button type="" @click="lookQuestionDrawIo">lookQuestionDrawIo</el-button>
+      <!-- lookDrawIo -->
+      <el-button type="" @click="lookDrawIo">查看图画（学生画的）</el-button>
+      <!-- lookQuestionDrawIo -->
+      <el-button type="" @click="lookQuestionDrawIo">查看画图题答案</el-button>
       <el-dialog title="" width="1400px" :visible.sync="questionDrawIoShowing">
         <DrawIo
           @saveDrawBack="saveDrawBack"

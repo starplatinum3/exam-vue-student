@@ -23,7 +23,9 @@
 
                     searchBatch
                     <el-button type="" @click="searchBatch">searchBatch</el-button>
+                    <a href="http://139.196.8.79/">做题方法 </a>
       </el-tab-pane>
+      <a class="buttonLink" href="http://139.196.8.79/">做题方法 </a>
     </el-tabs>
 
   </div>
@@ -137,3 +139,87 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+} */
+
+/* .buttonLink {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+} */
+
+
+.buttonLink {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db; /* 原始颜色为蓝色系 */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+.buttonLink:hover {
+  background-color: #8e44ad; /* 悬停后颜色变为紫色系 */
+}
+
+
+
+/* a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:hover::after {
+  background-color: #fff;
+} */
+
+</style>
