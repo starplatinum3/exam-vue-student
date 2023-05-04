@@ -1083,12 +1083,11 @@
                       value="上一题"
                     />
 
-                    <!-- 提前交卷 -->
                     <input
                       id="aheadFinish"
                       name="button"
                       class="btn warning-btn"
-                      value="提交试卷"
+                      value="提前交卷"
                       @click="submitFormConfirm"
                     />
                     <!-- type="submit" -->
@@ -1897,54 +1896,6 @@
       style="width: auto; height: 693px"
     ></div>
 
-    <el-dialog title="" width="1400px" :visible.sync="drawIoShowing">
-        <DrawIo
-          @saveDrawBack="saveDrawBack"
-          :drawIo="questionItem.drawIo"
-        ></DrawIo>
-      </el-dialog>
-
-      <el-dialog title="" width="1400px" :visible.sync="iframeDocShowing">
-        <iframe
-          ref="myframe"
-          id="myframe"
-          class="iframeDoc"
-          rameborder="no"
-          border="0"
-          marginwidth="0"
-          marginheight="0"
-          scrolling="no"
-          allowtransparency="yes"
-       
-          :src="docUrl"
-        ></iframe>
-        <!-- src="http://43.142.150.223:2301" -->
-        <!-- src="http://localhost:3001" -->
-        <!-- http://43.142.150.223:2323 -->
-        <!-- 2301 -->
-        <!-- src="http://43.142.150.223:2323" -->
-        <!-- src="http://localhost:3001" -->
-        <!-- 2301 drawio -->
-      </el-dialog>
-
-      <el-dialog
-      top="10px"
-      class="dialogG6Editor"
-      :visible.sync="dialogVisibleEditorG6Code"
-      append-to-body
-      :close-on-click-modal="false"
-      width="1300px"
-      height="1200px"
-      :show-close="false"
-      center
-    >
-   
-      <G6Tree @onClose="onCloseG6Tree" 
-      
-      @onCloseNotSave="onCloseNotSaveG6Tree" 
-      @exportData="exportData" :data="drawIoStr"></G6Tree>
-    </el-dialog>
-
     <!-- autoplay="autoplay" -->
     <!-- video load  -->
     <!-- <video
@@ -1997,10 +1948,196 @@
       <video ref="video" autoplay width="100" height="100"></video>
     </div>
 
-  
+    <button @click="btnTakePhotoClicked()">Take photo</button>
+    <canvas ref="canvas" width="400" height="300"></canvas>
+
+    <a href="" download="canvas.jpeg" id="save_herf">
+      <img src="" id="save_img" alt="" />
+    </a>
+
+    <el-button type="" @click="stopVideo">stopVideo</el-button>
+    <el-row class="do-exam-title">
+      <el-button type="primary" @click="goBack">goBack</el-button>
+
+      <el-col :span="24">
+        <span :key="item.itemOrder" v-for="item in answer.answerItems">
+          <el-tag
+            :type="questionCompleted(item.completed)"
+            class="do-exam-title-tag"
+            @click="goAnchor('#question-' + item.itemOrder)"
+            >{{ item.itemOrder }}</el-tag
+          >
+        </span>
+        <span class="do-exam-time">
+          <label>剩余时间：</label>
+          <label>{{ formatSeconds(remainTime) }}</label>
+        </span>
+      </el-col>
+    </el-row>
+    <el-row class="do-exam-title-hidden">
+      <el-col :span="24">
+        <span :key="item.itemOrder" v-for="item in answer.answerItems">
+          <el-tag class="do-exam-title-tag">{{ item.itemOrder }}</el-tag>
+        </span>
+        <span class="do-exam-time">
+          <label>剩余时间：</label>
+        </span>
+      </el-col>
+    </el-row>
+    <div class="app-item-contain">
+      <!-- <el-container  class="app-item-contain"> -->
+      <el-header class="align-center">
+        <h1>{{ form.name }}</h1>
+        <div>
+          <span class="question-title-padding">试卷总分：{{ form.score }}</span>
+          <span class="question-title-padding"
+            >考试时间：{{ form.suggestTime }}分钟</span
+          >
+
+          <el-button type="" @click="drawIoShowingToggle"
+            >drawIoShowingToggle</el-button
+          >
+        </div>
+      </el-header>
+      <el-main>
+        <el-form
+          :model="form"
+          ref="form"
+          v-loading="formLoading"
+          label-width="100px"
+        >
+          <el-row :key="index" v-for="(titleItem, index) in form.titleItems">
+            <h3>{{ titleItem.name }}</h3>
+            <el-card
+              class="exampaper-item-box"
+              v-if="titleItem.questionItems.length !== 0"
+            >
+              <!-- <el-form-item  -->
+              <!-- questionItemIdx -->
+
+              <div
+                :key="questionItem.itemOrder"
+                :label="questionItem.itemOrder + '.'"
+                v-for="questionItem in titleItem.questionItems"
+                class="exam-question-item"
+                label-width="50px"
+                :id="'question-' + questionItem.itemOrder"
+              >
+                <QuestionEdit
+                  :qType="questionItem.questionType"
+                  :question="questionItem"
+                  :answer="answer.answerItems[questionItem.itemOrder - 1]"
+                />
+                <!-- </el-form-item> -->
+              </div>
+
+              <!-- <div
+                :key="questionItem.itemOrder"
+                :label="questionItem.itemOrder + '.'"
+                v-for="questionItem in titleItem.questionItems"
+                class="exam-question-item"
+                label-width="50px"
+                :id="'question-' + questionItem.itemOrder"
+              >
+                <QuestionEdit
+                  :qType="questionItem.questionType"
+                  :question="questionItem"
+                  :answer="answer.answerItems[questionItem.itemOrder - 1]"
+                />
+             
+              </div> -->
+
+              <!-- </el-form-item> -->
+            </el-card>
+          </el-row>
+
+          <el-button type="" @click="drawIoShowingToggle"
+            >drawIoShowingToggle</el-button
+          >
+
+          <el-row class="do-align-center">
+            <!-- <el-button type="primary" @click="submitForm">提交</el-button> -->
+            <el-button type="primary" @click="submitFormConfirm"
+              >提交</el-button
+            >
+            <el-button>取消</el-button>
+          </el-row>
+        </el-form>
+      </el-main>
+      <!-- </el-container> -->
+
+      codemirror
+      <codemirror
+        ref="codemirrorCode"
+        v-model="curCode"
+        :options="cmOptions"
+        class="code"
+      >
+      </codemirror>
+
+      <!-- <textarea
+        ref="mycode"
+        class="codesql"
+        v-model="code"
+        style="height: 200px; width: 600px"
+      ></textarea> -->
+      <JavaScriptDemoVue></JavaScriptDemoVue>
+      <!-- width="2000px" -->
+      <el-dialog title="" width="1400px" :visible.sync="drawIoShowing">
+        <DrawIo
+          @saveDrawBack="saveDrawBack"
+          :drawIo="questionItem.drawIo"
+        ></DrawIo>
+      </el-dialog>
+
+      <el-dialog title="" width="1400px" :visible.sync="iframeDocShowing">
+        <iframe
+          ref="myframe"
+          id="myframe"
+          class="iframeDoc"
+          rameborder="no"
+          border="0"
+          marginwidth="0"
+          marginheight="0"
+          scrolling="no"
+          allowtransparency="yes"
+       
+          :src="docUrl"
+        ></iframe>
+        <!-- src="http://43.142.150.223:2301" -->
+        <!-- src="http://localhost:3001" -->
+        <!-- http://43.142.150.223:2323 -->
+        <!-- 2301 -->
+        <!-- src="http://43.142.150.223:2323" -->
+        <!-- src="http://localhost:3001" -->
+        <!-- 2301 drawio -->
+      </el-dialog>
+
+      <el-dialog
+      top="10px"
+      class="dialogG6Editor"
+      :visible.sync="dialogVisibleEditorG6Code"
+      append-to-body
+      :close-on-click-modal="false"
+      width="1300px"
+      height="1200px"
+      :show-close="false"
+      center
+    >
+   
+      <G6Tree @onClose="onCloseG6Tree" 
+      
+      @onCloseNotSave="onCloseNotSaveG6Tree" 
+      @exportData="exportData" :data="drawIoStr"></G6Tree>
+    </el-dialog>
+    <!-- drawIoStr -->
+    <!-- :data="answer.answerItems[questionItemIdx].drawIo" -->
+
+    <el-button type="" @click="toSetDrawPageG6Editor">用编辑器设计流程图</el-button>
+
 
     </div>
-
+  </div>
 </template>
 
 <script>
