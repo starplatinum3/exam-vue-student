@@ -5,7 +5,18 @@
 
 let url = window.location.href;
 let urlStr = url.split('/');
-let ip = urlStr[2].split(':')[0] 
+// let ip = urlStr[2].split(':')[0] 
+let parts= urlStr[2].split(':')
+let ip =parts[0]
+
+let port =parts[1]
+console.log("port base");
+console.log(port);
+// let ip = urlStr[2].split(':')[0] 
+// ip = 'localhost'
+// ip = '10.61.186.236'
+console.log("ip base");
+console.log(ip);
 // ip = 'localhost'
 // ip = '10.61.186.236'
 
@@ -15,12 +26,13 @@ let ip = urlStr[2].split(':')[0]
 // host: 'localhost',
 // port: 8001,
 // let examPort="8003"
-let examPort="8001"
+// let examPort="8001"
+let examPort=port
 
 // let examPort="8083"
 
 // const port = '7001'
-const port = examPort
+// const port = examPort
 // const port = '7002'
 
 // const ip = 'starplatinumora.top'
