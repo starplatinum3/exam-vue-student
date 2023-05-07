@@ -9,14 +9,14 @@
         <div class="lowin-box-inner">
           <el-form ref="loginForm" :model="loginForm" :rules="loginRules">
             <p>考试系统</p>
-            http://localhost:8003/api/all/getAllURL
-    <el-button @click="getAllURL">getAllURL</el-button>
-    <el-button @click="G6TreeTestGo">G6TreeTestGo</el-button>
-        <el-button @click="testSysGo">test-sys-go</el-button>
+            <!-- http://localhost:8003/api/all/getAllURL -->
+    <!-- <el-button @click="getAllURL">getAllURL</el-button> -->
+    <!-- <el-button @click="G6TreeTestGo">G6TreeTestGo</el-button> -->
+        <!-- <el-button @click="testSysGo">test-sys-go</el-button> -->
 
     <!-- test-sys -->
     <!-- G6TreeTest -->
-    <el-button type="" @click="setUserInfoOMaiE">setUserInfoOMaiE</el-button>
+    <!-- <el-button type="" @click="setUserInfoOMaiE">setUserInfoOMaiE</el-button> -->
 
     <!-- test-sys -->
 
@@ -42,8 +42,8 @@
         </div>
       </div>
     </div>
-    http://localhost:8003/api/all/getAllURL
-    <el-button @click="getAllURL">getAllURL</el-button>
+    <!-- http://localhost:8003/api/all/getAllURL -->
+    <!-- <el-button @click="getAllURL">getAllURL</el-button> -->
 <!--    <el-button @click="getAllURL">getAllURL</el-button>-->
     <div class="account-foot-copyright">
       <span>Copyright © 2021 starplatinumora 版权所有</span>
