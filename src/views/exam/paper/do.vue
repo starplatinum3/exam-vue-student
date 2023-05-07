@@ -10,12 +10,12 @@
           <label>{{ formatSeconds(remainTime) }}</label>
         </span>
 
-        <el-button type="" @click="drawIoShowingToggle"
+        <!-- <el-button type="" @click="drawIoShowingToggle"
           >drawIoShowingToggle</el-button
         >
         <el-button type="" @click="iframeDocShowingToggle"
           >iframeDocShowingToggle</el-button
-        >
+        > -->
 
         <nav data-v-5598cced="">
           <a
@@ -2102,8 +2102,8 @@ export default {
       dialogVisibleEditorG6Code:false,
       docUrl:docUrl,
       iframeWin:null,
-      debug:true,
-      // debug:false,
+      // debug:true,
+      debug:false,
       drawIoShowing: false,
       iframeDocShowing: false,
       questionItemIdx: 0,

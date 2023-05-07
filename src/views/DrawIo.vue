@@ -84,22 +84,22 @@
       </el-col>
     </el-row>
     <el-row>
-      <el-col :span="24">
+      <!-- <el-col :span="24">
         <el-button
           type="success"
           style="width: 100%; height: 50px; margin-top: 10px; font-size: 20px"
           @click="saveDraw"
           >保存画布</el-button
         >
-      </el-col>
+      </el-col> -->
     </el-row>
 
-    <el-button
+    <!-- <el-button
           type="success"
           style="width: 100%; height: 50px; margin-top: 10px; font-size: 20px"
           @click="saveDrawBack"
           >保存画布 返回</el-button
-        >
+        > -->
 
     <!-- <el-button
       type="success"
@@ -109,15 +109,25 @@
     > -->
     <!-- style="width: 100%; height: 50px; margin-top: 10px; font-size: 20px" -->
     <!-- saveQuestionDraw -->
-    <div class="button-success" type="success" @click="saveDrawDo">
+
+
+    <!-- <div class="button-success" type="success" @click="saveDrawDo">
       保存题目的画布
-    </div>
-    http://localhost:8002/#/exam/DrawIo?question_id=131
-    <el-button type="" @click="getDrawById">getDrawById</el-button>
+    </div> -->
+
+    <el-button
+          type="success"
+          style="width: 100%; height: 50px; margin-top: 10px; font-size: 20px"
+          @click="saveDrawDo"
+          >保存题目的画布</el-button  >
+
+
+    <!-- http://localhost:8002/#/exam/DrawIo?question_id=131 -->
+    <!-- <el-button type="" @click="getDrawById">getDrawById</el-button>
     http://localhost:8081/community/index
     <el-button type="" @click="nowcoderCommunityJump"
       >http://localhost:8081/community/index</el-button
-    >
+    > -->
 
     <!-- ————————————————
 版权声明：本文为CSDN博主「凌晨两点半`」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
