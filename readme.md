@@ -40,6 +40,11 @@ git add .
 git commit -m "student build"
 git push origin master
 pause
+长度
+
+cd /home/app/exam-sys-db
+python3 kill_java.py
+
 
 D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student>npm run serve
 

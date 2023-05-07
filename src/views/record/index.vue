@@ -20,10 +20,10 @@
            <el-table-column  align="right" width="70">
              <template slot-scope="{row}">
               <!-- 学生不该有批改的权限呀 -->
-               <!-- <router-link target="_blank" :to="{path:'/edit',query:{id:row.id}}" v-if="row.status === 1 ">
+               <router-link target="_blank" :to="{path:'/edit',query:{id:row.id}}" v-if="row.status === 1 ">
                  <el-button  type="text" size="small">批改</el-button>
                </router-link>
-               <router-link target="_blank" :to="{path:'/read',query:{id:row.id}}" v-if="row.status === 2 ">
+               <!-- <router-link target="_blank" :to="{path:'/read',query:{id:row.id}}" v-if="row.status === 2 ">
                  <el-button  type="text" size="small">查看试卷</el-button>
                </router-link> -->
                <!-- userInfo.role!=1  1 是student 2 teacher 3 admin -->
