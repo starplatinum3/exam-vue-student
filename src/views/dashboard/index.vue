@@ -135,6 +135,32 @@
         </el-col>
       </div>
     </el-row>
+    <el-row class="app-item-contain">
+      <h3 class="index-title-h3">智能试卷</h3>
+      <div style="padding-left: 15px">
+        <el-col
+          :span="4"
+          v-for="(item, index) in intelligentPapers"
+          :key="index"
+          :offset="index > 0 ? 1 : 0"
+        >
+          <el-card :body-style="{ padding: '0px' }" v-loading="loading">
+            <img src="@/assets/exam-paper/show1.png" class="image" />
+            <div style="padding: 14px">
+              <span>{{ item.name }}</span>
+              <div class="bottom clearfix">
+                <router-link
+                  target="_blank"
+                  :to="{ path: '/do', query: { id: item.id } }"
+                >
+                  <el-button type="text" class="button">开始做题</el-button>
+                </router-link>
+              </div>
+            </div>
+          </el-card>
+        </el-col>
+      </div>
+    </el-row>
     <!--    <div v-for="(item, index) in fixedPaper" :key="index">-->
     <!--      &lt;!&ndash; <div class="radius-problem">-->
     <!--          {{item.name}}-->
@@ -252,6 +278,7 @@ export default {
       loading: false,
       taskLoading: false,
       taskList: [],
+      intelligentPapers:[],
       options: [
         {
           value: "选项1",
@@ -307,6 +334,37 @@ export default {
       _this.taskList = re.response;
       _this.taskLoading = false;
     });
+    let  interlegrenct=8
+    let  intelligentPaper=10
+    let params={
+      pageIndex: 1,
+      pageSize: 10,
+      examPaperType:intelligentPaper,
+      // orderBy:"date_time",
+      orderBy:"id",
+      // orderBy:"iddaiodha",
+      orderDirection:"desc",
+      // orderDirection:"asc",
+      // orderDirection:"asc",
+      limit:5,
+      // limit:10,
+      // limit:20,
+      // limit:30,
+      // limit:40,
+      // limit:120,
+    }
+    // 智能试卷 英语 
+    // Intelligent test paper
+    // intelligentPapers
+    indexApi.indexByPaperFilter(params).then((re) => {
+      // ORDER BY #{orderBy}  #{orderDirection} limit #{limit}
+   
+      _this.intelligentPapers =re.response|| re.response.fixedPaper;
+      _this.taskLoading = false;
+      console.log(  "_this.intelligentPapers" );
+      console.log(  _this.intelligentPapers );
+    });
+    // indexByPaperFilter
 
     this.search()
   },

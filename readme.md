@@ -11,6 +11,18 @@ d:
 cd  D:\proj\bishe\exam-vue-student
 npm run  build
 
+d:
+cd D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student
+npm run  build
+cd D:\proj\springBoot\exam-sys-db2
+git add . 
+git commit -m "student build"
+git push origin master
+pause
+长度
+
+
+
 npm run  serve
 npm run  build
 
@@ -32,15 +44,6 @@ D:\proj\bishe\exam-vue-student
 父亲 界面要往iframe 里面postmessage，有跨域问题
 iframe 往父亲就没有
 
-d:
-cd D:\proj\springBoot\exam-vue-student\source\vue\exam-vue-student
-npm run  build
-cd D:\proj\springBoot\exam-sys-db2
-git add . 
-git commit -m "student build"
-git push origin master
-pause
-长度
 
 cd /home/app/exam-sys-db
 python3 kill_java.py
