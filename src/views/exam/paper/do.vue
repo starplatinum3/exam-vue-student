@@ -1046,11 +1046,11 @@
                     class="subject-opr-item js-call-help"
                     ><span class="icon-nc-share3"></span>场外求助</a
                   >
-                  <a
+                  <!-- <a
                     href="javascript:void(0);"
                     class="subject-opr-item js-feedback"
                     ><span class="icon-nc-question-sign"></span>知识点有误？</a
-                  >
+                  > -->
                 </div>
 
                 <div class="subject-next">
@@ -1083,6 +1083,13 @@
                       value="上一题"
                     />
 
+                    <input
+                      id="aheadFinish"
+                      name="button"
+                      class="btn warning-btn"
+                      value="画树状图"
+                      @click="toSetDrawPageG6Editor"
+                    />
                     <!-- 提前交卷 -->
                     <input
                       id="aheadFinish"
