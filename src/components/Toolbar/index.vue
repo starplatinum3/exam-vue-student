@@ -88,9 +88,10 @@
     <!-- exportData -->
     <el-button @click="exportData" type="primary">导出数据</el-button>
     <!-- onClose -->
-    <el-button @click="onClose" type="primary">关闭并保存</el-button>
+    <!-- <el-button @click="onClose" type="primary">关闭并保存</el-button> -->
     <!-- onCloseNotSave -->
-    <el-button @click="onCloseNotSave" type="primary">关闭不保存</el-button>
+    <!-- <el-button @click="onCloseNotSave" type="primary">关闭不保存</el-button> -->
+    <el-button @click="onCloseNotSave" type="primary">关闭</el-button>
 
 
   </div>

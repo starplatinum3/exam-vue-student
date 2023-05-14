@@ -1031,11 +1031,11 @@
                     ></span
                   >
 
-                  <a
+                  <!-- <a
                     href="javascript:void(0);"
                     class="subject-opr-item js-call-help"
                     ><span class="icon-nc-share3"></span>场外求助</a
-                  >
+                  > -->
                   <!-- <a
                     href="javascript:void(0);"
                     class="subject-opr-item js-feedback"
