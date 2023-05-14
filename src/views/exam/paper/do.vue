@@ -125,7 +125,7 @@
               <div data-v-2a49ace6="" class="el-dropdown">
                 <!-- 面试 -->
                 <!-- href="https://www.nowcoder.com/interview/center" -->
-                  <!-- class="hover-class head-title el-dropdown-selfdefine" -->
+                <!-- class="hover-class head-title el-dropdown-selfdefine" -->
                 <a
                   data-v-2a49ace6=""
                   href="http://139.196.8.79/"
@@ -396,10 +396,7 @@
               </div>
               <div
                 role="region"
-                class="
-                  el-autocomplete-suggestion el-popper
-                  search-suggestion-list
-                "
+                class="el-autocomplete-suggestion el-popper search-suggestion-list"
                 style="display: none"
               >
                 <div class="el-scrollbar nowcoder-custom">
@@ -408,10 +405,7 @@
                     style="margin-bottom: -17px; margin-right: -17px"
                   >
                     <ul
-                      class="
-                        el-scrollbar__view
-                        el-autocomplete-suggestion__list
-                      "
+                      class="el-scrollbar__view el-autocomplete-suggestion__list"
                       role="listbox"
                       id="el-autocomplete-8426"
                     ></ul>
@@ -666,10 +660,7 @@
                 </div>
                 <ul
                   data-v-e2880ffa=""
-                  class="
-                    el-dropdown-menu el-popper
-                    nc-nav-header-profile-dropdown
-                  "
+                  class="el-dropdown-menu el-popper nc-nav-header-profile-dropdown"
                   id="dropdown-menu-2222"
                   style="display: none"
                 >
@@ -945,7 +936,6 @@
 
                 <!-- :iframeDocShowing="iframeDocShowing" -->
                 <QuestionEditNowCoder
-               
                   :qType="questionItem.questionType"
                   :question="questionItem"
                   :answer="answer.answerItems[questionItem.itemOrder - 1]"
@@ -1069,7 +1059,7 @@
                       value="画流程图"
                     />
 
-                      <!-- <input
+                    <!-- <input
                       @click="iframeDocShowDo"
                       name="button"
                       class="btn btn-primary"
@@ -1083,6 +1073,13 @@
                       value="上一题"
                     />
 
+                    <input
+                      id="aheadFinish"
+                      name="button"
+                      class="btn warning-btn"
+                      value="设计流程图"
+                      @click="toSetDrawPageG6"
+                    />
                     <input
                       id="aheadFinish"
                       name="button"
@@ -1179,17 +1176,7 @@
           <div class="right-nav-bar">
             <div
               data-v-81bad520=""
-              class="
-                tw-w-10
-                tw-fixed
-                tw-right-2.5
-                tw-rounded-t-lg
-                tw-rounded-bl-lg
-                tw-shadow-sm
-                tw-bg-white
-                tw-z-[999]
-                tw-bottom-[225px]
-              "
+              class="tw-w-10 tw-fixed tw-right-2.5 tw-rounded-t-lg tw-rounded-bl-lg tw-shadow-sm tw-bg-white tw-z-[999] tw-bottom-[225px]"
             >
               <!---->
               <a
@@ -1239,9 +1226,7 @@
                     </div>
                     <div
                       data-v-81bad520=""
-                      class="
-                        tw-text-size-caption tw-text-gray-700 tw-text-center
-                      "
+                      class="tw-text-size-caption tw-text-gray-700 tw-text-center"
                     >
                       扫描二维码，进入QQ群
                     </div>
@@ -1296,9 +1281,7 @@
                     </div>
                     <div
                       data-v-81bad520=""
-                      class="
-                        tw-text-size-caption tw-text-gray-700 tw-text-center
-                      "
+                      class="tw-text-size-caption tw-text-gray-700 tw-text-center"
                     >
                       扫描二维码，关注牛客公众号
                     </div>
@@ -1426,16 +1409,7 @@
             <footer data-v-462fe678="" class="tw-w-1200 tw-mx-auto">
               <div
                 data-v-462fe678=""
-                class="
-                  tw-py-11
-                  tw-flex
-                  tw-justify-between
-                  tw-border-b-1
-                  tw-border-t-1
-                  tw-border-transparent
-                  tw-border-gray-800
-                  tw-items-center
-                "
+                class="tw-py-11 tw-flex tw-justify-between tw-border-b-1 tw-border-t-1 tw-border-transparent tw-border-gray-800 tw-items-center"
               >
                 <ul
                   data-v-462fe678=""
@@ -1455,9 +1429,7 @@
                         <div data-v-462fe678="" class="tw-p-3 tw-box-border">
                           <div
                             data-v-462fe678=""
-                            class="
-                              tw-text-size-base tw-text-gray-800 tw-text-center
-                            "
+                            class="tw-text-size-base tw-text-gray-800 tw-text-center"
                           >
                             刷真题、补算法、看面经、得内推
                           </div>
@@ -1474,11 +1446,7 @@
                           </div>
                           <div
                             data-v-462fe678=""
-                            class="
-                              tw-text-size-caption-pure
-                              tw-text-gray-700
-                              tw-text-center
-                            "
+                            class="tw-text-size-caption-pure tw-text-gray-700 tw-text-center"
                           >
                             扫一扫，把题目装进口袋
                           </div>
@@ -1487,15 +1455,7 @@
                       <span class="el-popover__reference-wrapper">
                         <div
                           data-v-462fe678=""
-                          class="
-                            tw-text-size-base-pure
-                            tw-h-5.5
-                            tw-flex
-                            tw-items-center
-                            font-color
-                            tw-cursor-pointer
-                            el-popover__reference
-                          "
+                          class="tw-text-size-base-pure tw-h-5.5 tw-flex tw-items-center font-color tw-cursor-pointer el-popover__reference"
                           aria-describedby="el-popover-49"
                           tabindex="0"
                         >
@@ -1626,9 +1586,7 @@
                         </div>
                         <div
                           data-v-462fe678=""
-                          class="
-                            tw-text-size-caption tw-text-gray-700 tw-text-center
-                          "
+                          class="tw-text-size-caption tw-text-gray-700 tw-text-center"
                         >
                           扫描二维码，进入QQ群
                         </div>
@@ -1637,11 +1595,7 @@
                     <span class="el-popover__reference-wrapper"
                       ><span
                         data-v-462fe678=""
-                        class="
-                          tw-cursor-pointer tw-mr-7.5
-                          hover:tw-text-gray-500
-                          el-popover__reference
-                        "
+                        class="tw-cursor-pointer tw-mr-7.5 hover:tw-text-gray-500 el-popover__reference"
                         aria-describedby="el-popover-2755"
                         tabindex="0"
                         ><span
@@ -1687,9 +1641,7 @@
                         </div>
                         <div
                           data-v-462fe678=""
-                          class="
-                            tw-text-size-caption tw-text-gray-700 tw-text-center
-                          "
+                          class="tw-text-size-caption tw-text-gray-700 tw-text-center"
                         >
                           扫描二维码，关注牛客公众号
                         </div>
@@ -1698,11 +1650,7 @@
                     <span class="el-popover__reference-wrapper"
                       ><span
                         data-v-462fe678=""
-                        class="
-                          tw-cursor-pointer tw-mr-7.5
-                          hover:tw-text-gray-500
-                          el-popover__reference
-                        "
+                        class="tw-cursor-pointer tw-mr-7.5 hover:tw-text-gray-500 el-popover__reference"
                         aria-describedby="el-popover-7990"
                         tabindex="0"
                         ><span
@@ -1904,37 +1852,37 @@
       style="width: auto; height: 693px"
     ></div>
 
+    <!-- nowEditAns -->
     <el-dialog title="" width="1400px" :visible.sync="drawIoShowing">
-        <DrawIo
-          @saveDrawBack="saveDrawBack"
-          :drawIo="questionItem.drawIo"
-        ></DrawIo>
-      </el-dialog>
+      <DrawIo
+        @saveDrawBack="saveDrawBack"
+        :drawIo="questionItem.drawIo"
+      ></DrawIo>
+    </el-dialog>
 
-      <el-dialog title="" width="1400px" :visible.sync="iframeDocShowing">
-        <iframe
-          ref="myframe"
-          id="myframe"
-          class="iframeDoc"
-          rameborder="no"
-          border="0"
-          marginwidth="0"
-          marginheight="0"
-          scrolling="no"
-          allowtransparency="yes"
-       
-          :src="docUrl"
-        ></iframe>
-        <!-- src="http://43.142.150.223:2301" -->
-        <!-- src="http://localhost:3001" -->
-        <!-- http://43.142.150.223:2323 -->
-        <!-- 2301 -->
-        <!-- src="http://43.142.150.223:2323" -->
-        <!-- src="http://localhost:3001" -->
-        <!-- 2301 drawio -->
-      </el-dialog>
+    <el-dialog title="" width="1400px" :visible.sync="iframeDocShowing">
+      <iframe
+        ref="myframe"
+        id="myframe"
+        class="iframeDoc"
+        rameborder="no"
+        border="0"
+        marginwidth="0"
+        marginheight="0"
+        scrolling="no"
+        allowtransparency="yes"
+        :src="docUrl"
+      ></iframe>
+      <!-- src="http://43.142.150.223:2301" -->
+      <!-- src="http://localhost:3001" -->
+      <!-- http://43.142.150.223:2323 -->
+      <!-- 2301 -->
+      <!-- src="http://43.142.150.223:2323" -->
+      <!-- src="http://localhost:3001" -->
+      <!-- 2301 drawio -->
+    </el-dialog>
 
-      <el-dialog
+    <el-dialog
       top="10px"
       class="dialogG6Editor"
       :visible.sync="dialogVisibleEditorG6Code"
@@ -1945,13 +1893,33 @@
       :show-close="false"
       center
     >
-   
-      <G6Tree @onClose="onCloseG6Tree" 
-      
-      @onCloseNotSave="onCloseNotSaveG6Tree" 
-      @exportData="exportData" :data="drawIoStr"></G6Tree>
+      <G6Tree
+        @onClose="onCloseG6Tree"
+        @onCloseNotSave="onCloseNotSaveG6Tree"
+        @exportData="exportData"
+        :data="drawIoStr"
+      ></G6Tree>
     </el-dialog>
+    <!-- :close-on-click-modal="false" -->
 
+    <el-dialog
+      top="10px"
+      class="dialogG6Editor"
+      :visible.sync="richEditor.dialogVisibleEditorG6"
+      append-to-body
+
+      width="1300px"
+      height="1200px"
+      :show-close="false"
+      center
+    >
+    <!-- drawIoStr -->
+    <!-- <G6Editor @exportData="exportData" :data="drawIoStr" mode="edit"> -->
+      <G6Editor  class="G6Editor" @exportData="exportData" :data="{}" mode="edit">
+
+      <!-- <G6Editor @exportData="exportData" :data="form.drawIo" mode="edit"> -->
+      </G6Editor>
+    </el-dialog>
     <!-- autoplay="autoplay" -->
     <!-- video load  -->
     <!-- <video
@@ -1988,26 +1956,13 @@
     <div
       data-v-106c86ed=""
       data-v-81bad520=""
-      class="
-        tw-w-200
-        tw-fixed
-        tw-right-2.5
-        tw-rounded-t-lg
-        tw-rounded-bl-lg
-        tw-shadow-sm
-        tw-bg-white
-        tw-z-[999]
-        tw-bottom-[225px]
-      "
+      class="tw-w-200 tw-fixed tw-right-2.5 tw-rounded-t-lg tw-rounded-bl-lg tw-shadow-sm tw-bg-white tw-z-[999] tw-bottom-[225px]"
     >
       <!-- width="400" height="300" -->
       <video ref="video" autoplay width="100" height="100"></video>
     </div>
-
-  
-
-    </div>
-
+    <el-button type="" @click="toSetDrawPageG6">去设计流程图</el-button>
+  </div>
 </template>
 
 <script>
@@ -2021,11 +1976,11 @@
 //   require("codemirror/mode/sql/sql");
 //   require("codemirror/addon/hint/show-hint");
 //   require("codemirror/addon/hint/sql-hint");
-
+// import G6Editor from "@/components/G6Editor/index";
 import eventBus from "@/utils/eventBus";
 // import G6Editor from './components/G6Editor'
 // import G6Editor from '@/components/G6Editor'
-import G6Editor from '@/components/G6Editor/index'
+import G6Editor from "@/components/G6Editor/index";
 import "codemirror/theme/ambiance.css";
 import "codemirror/lib/codemirror.css";
 import "codemirror/addon/hint/show-hint.css";
@@ -2047,7 +2002,7 @@ import NodeUtil from "@/utils/NodeUtil";
 import G6Util from "@/utils/G6Util";
 
 // import {throttle} from "@/utils/throttle";
-import {throttle} from "@/utils/tools";
+import { throttle } from "@/utils/tools";
 
 import "codemirror/lib/codemirror.css";
 import "codemirror/mode/xml/xml"; // xml编辑器模式
@@ -2082,7 +2037,7 @@ import JavaScriptDemoVue from "../../JavaScriptDemo.vue";
 // <!-- import { log } from "console"; -->
 
 import common from "@/utils/common";
- 
+
 import ObjUtil from "@/utils/ObjUtil";
 import G6Tree from "@/components/G6Tree";
 // ————————————————
@@ -2100,17 +2055,16 @@ export default {
     G6Editor,
   },
   data() {
-      
     // 43.142.150.223
     // let  docUrl="http://43.142.150.223:2301"
-    let  docUrl="http://43.142.150.223:2323"
+    let docUrl = "http://43.142.150.223:2323";
 
     return {
-      dialogVisibleEditorG6Code:false,
-      docUrl:docUrl,
-      iframeWin:null,
+      dialogVisibleEditorG6Code: false,
+      docUrl: docUrl,
+      iframeWin: null,
       // debug:true,
-      debug:false,
+      debug: false,
       drawIoShowing: false,
       iframeDocShowing: false,
       questionItemIdx: 0,
@@ -2182,14 +2136,30 @@ export default {
       },
       timer: null,
       remainTime: 0,
-      drawIoStr:null,
+      drawIoStr: null,
+      richEditor: {
+        dialogVisibleEditor: false,
+        dialogVisible: false,
+        object: null,
+        parameterName: "",
+        instance: null,
+        dialogVisibleEditorG6: false,
+      },
+      nowEditAns: {},
     };
   },
   created() {
-    eventBus.$on('exportData', (data) => {
-      console.log("data exportData emit")
-      console.log(data)
-    })
+    eventBus.$on("exportData", (data) => {
+      console.log("data exportData emit");
+      console.log(data);
+    });
+
+    eventBus.$on("onCloseNotSave", (data) => {
+      console.log("onCloseNotSave");
+      // console.log(onCloseNotSave);
+
+      this.richEditor.dialogVisibleEditorG6 = false;
+    });
     // setTimeout(() => {
     //   this.$refs.codemirrorCode.refresh();
     // }, 1);
@@ -2240,13 +2210,62 @@ export default {
     // window.addEventListener("message", receiveMessageFromIndex, false);
   },
   mounted() {
-    this.iframeMounted()
+    this.iframeMounted();
     this.initData();
     this.initVueApp();
     this.btnTakePhotoClicked();
     // this. drawIoStr=JSON.stringify(
     //   this.answer.answerItems[this.questionItemIdx].drawIo
     // )
+
+    eventBus.$on("exportData", (data) => {
+      console.log("data exportData emit");
+      console.log(data);
+    });
+    // onCloseNotSave
+    eventBus.$on("onCloseNotSave", (data) => {
+      console.log("onCloseNotSave");
+      // console.log(onCloseNotSave);
+
+      this.richEditor.dialogVisibleEditorG6 = false;
+    });
+    eventBus.$on("onClose", (data) => {
+      console.log("data onClose emit");
+      console.log(data);
+      this.richEditor.dialogVisibleEditorG6 = false;
+      // let questionId = this.$route.query?.question_id;
+      let questionId = this.form.id;
+
+      // this.form.questionId
+      // node_draw
+      let qu = {
+        id: 145,
+        questionType: 5,
+        subjectId: 5,
+        title: "drawio",
+        gradeLevel: 2,
+        items: [],
+        analyze: "无",
+        correctArray: null,
+        correct: "drawio",
+        score: 1,
+        difficult: 3,
+        itemOrder: null,
+        videoLink: null,
+        createUserId: null,
+      };
+
+      let drawObj = {};
+      let drawObjContent = data;
+      questionDrawApi
+        .saveDrawOfQuestion(drawObj, this.$message, questionId, drawObjContent)
+        .then((re) => {
+          console.log("re");
+          console.log(re);
+          // this.form.title = re.response;
+          // this.richEditor.dialogVisibleEditor = false;
+        });
+    });
   },
 
   beforeDestroy() {
@@ -2254,28 +2273,31 @@ export default {
     this.stopVideo();
   },
   methods: {
+    toSetDrawPageG6() {
+      this.richEditor.dialogVisibleEditorG6 = true;
+    },
 
     // exportData(data){
     //   console.log("data exportData")
     //   console.log(data)
     // },
 
-    toSetDrawPageG6Editor(){
-      this.dialogVisibleEditorG6Code=true
+    toSetDrawPageG6Editor() {
+      this.dialogVisibleEditorG6Code = true;
     },
-    onCloseG6Tree(JsonCodeMirrorVal){
+    onCloseG6Tree(JsonCodeMirrorVal) {
       // this.$emit('onClose',JsonCodeMirrorVal)
 
       console.log("JsonCodeMirrorVal onCloseG6Tree");
       console.log(JsonCodeMirrorVal);
-      let  nowEditAns=
-      this.answer.answerItems[this.questionItemIdx]
-      nowEditAns.drawIo=JsonCodeMirrorVal
+      let nowEditAns = this.answer.answerItems[this.questionItemIdx];
+      nowEditAns.drawIo = JsonCodeMirrorVal;
+      this.nowEditAns = nowEditAns;
       // this.form.g6Tree=JsonCodeMirrorVal
-      this.dialogVisibleEditorG6Code=false
+      this.dialogVisibleEditorG6Code = false;
     },
-    onCloseNotSaveG6Tree(JsonCodeMirrorVal){
-      this.dialogVisibleEditorG6Code=false
+    onCloseNotSaveG6Tree(JsonCodeMirrorVal) {
+      this.dialogVisibleEditorG6Code = false;
     },
     exportData(data) {
       console.log(data);
@@ -2305,10 +2327,7 @@ export default {
       //   data,
       //   "*"
       // );
-      window.top.postMessage(
-   data,
-   "*"
- );
+      window.top.postMessage(data, "*");
 
       // setTimeout(()=>{
       //   let iframeWin=  this.iframeWin
@@ -2329,54 +2348,53 @@ export default {
       // console.log("this.content");
       // console.log(this.content);
       // let content = this.answer.content;
-      let  nowEditAns=
-      this.answer.answerItems[this.questionItemIdx]
-      let content =   nowEditAns.content
+      let nowEditAns = this.answer.answerItems[this.questionItemIdx];
+      let content = nowEditAns.content;
       // this.answer.answerItems[this.questionItemIdx].content = docContent;
       console.log("content docShow");
       console.log(content);
       //   if (data.type == 'init') {
       //   return
       // // }
-      let that=this
+      let that = this;
       setTimeout(() => {
         // let  docUrl="http://43.142.150.223:2301"
-        let  docUrl=this.docUrl
+        let docUrl = this.docUrl;
         // let  docUrl="http://localhost:3001"
         // let  docUrl="http://43.142.150.223:2323"
         // var url =  "/ceshi.html?id="+111;
-      
-        // js  obj to query string
-        let  data={
-          type: "init",
-          content,
-        }
-       let queryData=  ObjUtil.objectToQueryString(data)
-       console.log("queryData");
-       console.log(queryData);
-      //  var url =  `${docUrl}?${queryData}`;
-       var url =  `${docUrl}/${queryData}`;
-// aaa.location=url;
-console.log("url");
-console.log(url);
-// console.log("url");
-// console.log(url);
-// console.log("that.iframeWin");
-// console.log(that.iframeWin);
-let  iframeWin=that.getIframeWin()
-console.log("iframeWin get");
-console.log(iframeWin);
 
-// iframeWin.location.href=url;
-// this.iframeWin.location=url;
-// that.iframeWin.location.href=url;
-// window.location.href = "XXX"
-window.docData={
+        // js  obj to query string
+        let data = {
           type: "init",
           content,
-        }
-// window.docContent=content
-console.log("sendMegToIframe to  firame");
+        };
+        let queryData = ObjUtil.objectToQueryString(data);
+        console.log("queryData");
+        console.log(queryData);
+        //  var url =  `${docUrl}?${queryData}`;
+        var url = `${docUrl}/${queryData}`;
+        // aaa.location=url;
+        console.log("url");
+        console.log(url);
+        // console.log("url");
+        // console.log(url);
+        // console.log("that.iframeWin");
+        // console.log(that.iframeWin);
+        let iframeWin = that.getIframeWin();
+        console.log("iframeWin get");
+        console.log(iframeWin);
+
+        // iframeWin.location.href=url;
+        // this.iframeWin.location=url;
+        // that.iframeWin.location.href=url;
+        // window.location.href = "XXX"
+        window.docData = {
+          type: "init",
+          content,
+        };
+        // window.docContent=content
+        console.log("sendMegToIframe to  firame");
         this.sendMegToIframe({
           type: "init",
           content,
@@ -2394,20 +2412,19 @@ console.log("sendMegToIframe to  firame");
       //   })
       // })
     },
-    getIframeWin(){
-      if(  this.iframeWin==null){
-        this. iframeWin = this.$refs.myframe?.contentWindow
+    getIframeWin() {
+      if (this.iframeWin == null) {
+        this.iframeWin = this.$refs.myframe?.contentWindow;
       }
-    return    this. iframeWin
-   
+      return this.iframeWin;
     },
     iframeMounted() {
       //获取iframe元素
       let iFrame = this.$refs.myframe;
       // myframe
-      let iframeWin=this.getIframeWin()
+      let iframeWin = this.getIframeWin();
       // let iframeWin = this.$refs.myframe?.contentWindow;;
-      this.iframeWin=iframeWin
+      this.iframeWin = iframeWin;
       // this.iframeWin=iframeWin
       // let
       // iFrame = document.getElementById('myframe')
@@ -2423,32 +2440,31 @@ console.log("sendMegToIframe to  firame");
 
       //回调函数
       let _this = this;
-      const receiveMessageFromIndex =(event)=> {
+      const receiveMessageFromIndex = (event) => {
         // console.log("receiveMessage from  xioo-docs/ do page ", event);
         let docContent = event.data.content;
         // data
-        if(   event.data.type=="close"){
+        if (event.data.type == "close") {
           console.log("docContent on close do page");
-        console.log(docContent);
-        _this.iframeDocShowing = false;
+          console.log(docContent);
+          _this.iframeDocShowing = false;
           // answer.content=docContent
           // this.iframeDocShowing = false;
-          console.log( "this.answer");
-          console.log( _this.answer);
-          console.log( " this.answer?.answerItems");
-          console.log(  _this.answer?.answerItems);
-          console.log( "this.questionItemIdx");
-          console.log( _this.questionItemIdx);
-          console.log( "this.answer?.answerItems[this.questionItemIdx]");
-          console.log( _this.answer?.answerItems[_this.questionItemIdx]);
-        // this.answer?.answerItems[this.questionItemIdx]?.content = docContent;
-        // this.answer?.answerItems[this.questionItemIdx]?.content = docContent;
-        this.answer.answerItems[this.questionItemIdx].content = docContent;
+          console.log("this.answer");
+          console.log(_this.answer);
+          console.log(" this.answer?.answerItems");
+          console.log(_this.answer?.answerItems);
+          console.log("this.questionItemIdx");
+          console.log(_this.questionItemIdx);
+          console.log("this.answer?.answerItems[this.questionItemIdx]");
+          console.log(_this.answer?.answerItems[_this.questionItemIdx]);
+          // this.answer?.answerItems[this.questionItemIdx]?.content = docContent;
+          // this.answer?.answerItems[this.questionItemIdx]?.content = docContent;
+          this.answer.answerItems[this.questionItemIdx].content = docContent;
         }
         // console.log("docContent on close  do page");
         // console.log(docContent);
-       
-      }
+      };
 
       //监听message事件
       window.addEventListener("message", receiveMessageFromIndex, false);
@@ -2463,9 +2479,8 @@ console.log("sendMegToIframe to  firame");
     drawIoShowingToggle() {
       this.drawIoShowing = !this.drawIoShowing;
     },
-    iframeDocShowDo(){
-
-      this.docShowSetData()
+    iframeDocShowDo() {
+      this.docShowSetData();
     },
     iframeDocShowingToggle() {
       this.iframeDocShowing = !this.iframeDocShowing;
@@ -2521,11 +2536,10 @@ console.log("sendMegToIframe to  firame");
           console.log(titleItems);
           // _this.questionItem= _this.form.titleItem.qu
           _this.remainTime = re.response.suggestTime * 60;
-          if(_this.debug){
-            _this.remainTime=111111111111
+          if (_this.debug) {
+            _this.remainTime = 111111111111;
           }
-         
-      
+
           _this.initAnswer();
           _this.timeReduce();
           _this.formLoading = false;
@@ -2701,9 +2715,10 @@ console.log("sendMegToIframe to  firame");
         }
       }
 
-      this. drawIoStr=JSON.stringify(
-      this.answer.answerItems[this.questionItemIdx].drawIo
-    )
+      this.drawIoStr = JSON.stringify(
+        this.answer.answerItems[this.questionItemIdx].drawIo
+      );
+      this.nowEditAns=this.answer.answerItems[this.questionItemIdx];
     },
     nextProblem() {
       console.log("this.questionItemIdx");
@@ -2725,6 +2740,7 @@ console.log("sendMegToIframe to  firame");
       console.log(" this.questionItem=");
       console.log(this.questionItem);
       // this.questionItem.drawIo
+      this.nowEditAns=this.answer.answerItems[this.questionItemIdx];
     },
     prevProblem() {
       console.log("this.questionItemIdx");
@@ -2745,6 +2761,7 @@ console.log("sendMegToIframe to  firame");
       this.questionItem = this.titleItem.questionItems[this.questionItemIdx];
       console.log(" this.questionItem=");
       console.log(this.questionItem);
+      this.nowEditAns=this.answer.answerItems[this.questionItemIdx];
     },
 
     changeProblem(index) {
@@ -2847,4 +2864,22 @@ console.log("sendMegToIframe to  firame");
   height: 90vh;
   border: medium none;
 }
+
+.dialogG6Editor {
+  /* width: 1000px; */
+  /* height: 600px; */
+  /* padding: 0;
+  margin: 0;
+  border: none; */
+  height: 800px;
+}
+// .G6Editor{
+//   height: 800px;
+// }
+</style>
+
+<style>
+/* .el-dialog__body {
+ height:800px;
+} */
 </style>

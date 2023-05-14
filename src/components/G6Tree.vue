@@ -10,9 +10,10 @@
         <el-button type="" @click="getCode">代码编译</el-button>
         
         <!-- onClose -->
-        <el-button type="" @click="onClose">保存并关闭</el-button>
+        <!-- <el-button type="" @click="onClose">保存并关闭</el-button> -->
         <!-- onCloseNotSave -->
-        <el-button type="" @click="onCloseNotSave">关闭不保存</el-button>
+        <!-- <el-button type="" @click="onCloseNotSave">关闭不保存</el-button> -->
+        <el-button type="" @click="onCloseNotSave">关闭</el-button>
 
         <!-- :style="{ height: '800px', width: '70%' }"  -->
         <!-- id="container" -->

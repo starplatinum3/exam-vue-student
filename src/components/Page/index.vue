@@ -66,6 +66,9 @@ export default {
         }
       });
       const { editor, command } = this.$parent;
+      console.log("editor");
+      console.log(editor);
+
       editor.emit("afterAddPage", { graph: this.graph, command });
 
       this.readData();

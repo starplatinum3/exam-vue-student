@@ -13,7 +13,8 @@
         <!--miniMap-->
         <minimap />
         <!--page-->
-        <page :height="height" :width="width" :data="data" />
+        <!-- data -->
+        <page :height="height" :width="width" :data="dataG6" />
       </div>
     </div>
     <Flow />
@@ -60,6 +61,101 @@ export default {
     },
   },
   created() {
+
+    let drawG6 = {
+        nodes: [
+          {
+            name: "背景图片节点",
+            label: "背景图片节点",
+            size: ["170", "34"],
+            type: "node",
+            x: 133,
+            y: 177,
+            shape: "customNode",
+            color: "#1890ff",
+            image:
+              "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
+            stateImage: "static/img/ok.463ab0e4.svg",
+            backImage: "static/img/bg.9a8b47e5.jpg",
+            inPoints: [[0, 0.5]],
+            outPoints: [[1, 0.5]],
+            offsetX: 56,
+            offsetY: 21,
+            id: "node2",
+          },
+          {
+            name: "测试节点",
+            label: "测试节点",
+            // "size": ["170", "34"],
+            size: ["30", "30"],
+            type: "node",
+            x: 213,
+            y: 60,
+            shape: "customNode",
+            color: "#1890ff",
+            image:
+              "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
+            stateImage: "static/img/ok.463ab0e4.svg",
+            inPoints: [[0, 0.5]],
+            outPoints: [[1, 0.5]],
+            offsetX: 36,
+            offsetY: 3,
+            id: "node8",
+          },
+          {
+            name: "背景图片节点",
+            label: "背景图片节点",
+            size: ["170", "34"],
+            type: "node",
+            x: 143 + 200,
+            y: 177,
+            shape: "customNode",
+            color: "#1890ff",
+            image:
+              "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
+            stateImage: "static/img/ok.463ab0e4.svg",
+            backImage: "static/img/bg.9a8b47e5.jpg",
+            inPoints: [[0, 0.5]],
+            outPoints: [[1, 0.5]],
+            offsetX: 56,
+            offsetY: 21,
+            id: "node2",
+          },
+        ],
+        edges: [
+          {
+            id: "edge72",
+            source: "node8",
+            target: "node2",
+            sourceId: "node8",
+            targetId: "node2",
+            start: {
+              x: 0,
+              y: 17,
+            },
+            end: {
+              x: 0,
+              y: -17,
+            },
+            shape: "customEdge",
+            type: "edge",
+            startPoint: {
+              x: 201.03418803418805,
+              y: 77.5,
+            },
+            endPoint: {
+              x: 144.96581196581195,
+              y: 159.5,
+            },
+          },
+        ],
+        groups: [],
+      };
+    // this.data=drawG6
+    this.dataG6=drawG6
+
+    console.log("this.data created");
+    console.log(this.data);
     this.init();
   },
   data() {
@@ -163,7 +259,10 @@ export default {
       this.data = drawG6;
 
       this.row2Get();
+   
       this.editor = new Editor();
+      console.log(" this.editor init");
+      console.log( this.editor);
       this.command = new command(this.editor);
     },
     exportData(data) {

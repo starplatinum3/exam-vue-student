@@ -309,6 +309,8 @@ export default {
       console.log(this.graph.save());
     },
     exportData(){
+      console.log("this.graph");
+      console.log(this.graph);
       // this.graph.save()
       let  data=this.graph.save()
       this.$emit('exportData',data)
@@ -336,6 +338,7 @@ export default {
 
       // evimport eventBus from "@/utils/eventBus";
       // eventBus.$emit('onClose',data)
+      // console.log('onCloseNotSave tool');
       eventBus.$emit('onCloseNotSave')
 
       // eventBus.$emit('exportData',this.graph.save())
