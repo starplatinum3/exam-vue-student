@@ -196,6 +196,11 @@ export default {
    */
   _updateDelegate(e, nodeEvent, x, y) {
     const bbox = nodeEvent.item.get('keyShape').getBBox();
+//     nodeEvent.item表示事件关联的图形元素。通过调用get('keyShape')方法，获取该图形元素的主要形状对象（通常是一个路径或矩形）。然后，调用getBBox()方法获取该形状对象的边界框。
+
+// 最后，将边界框保存在变量bbox中。
+
+// 边界框（bounding box）是一个矩形区域，用于描述图形元素在画布上的位置和尺寸。它通常由左上角的坐标（x、y），宽度（width）和高度（height）组成。
     if (!this.shape) {
       // 拖动多个
       const parent = this.graph.get('group');
@@ -226,6 +231,13 @@ export default {
         this.target.set('delegateShape', this.shape);
       }
       this.shape.set('capture', false);
+//       在这段代码中，this.shape表示一个图形元素对象。
+
+// 通过调用set('capture', false)方法，设置图形元素的捕获状态为false，即禁用捕获。
+
+// 捕获状态指示图形元素是否能够捕获用户输入事件（如鼠标点击、鼠标移动等）。当捕获状态为true时，图形元素能够接收和处理这些事件；当捕获状态为false时，图形元素将不会接收这些事件。
+
+// 在这里，将捕获状态设置为false，可能是为了禁止该图形元素接收用户的输入事件。这可能是为了在特定的上下文中避免对该图形元素的输入事件作出响应，或者将输入事件传递给其他图形元素进行处理。
     }
 
     if (this.targets.length > 0) {
@@ -273,7 +285,17 @@ export default {
     const maxX = Math.floor(Math.max(...maxx));
     const minY = Math.floor(Math.min(...miny));
     const maxY = Math.floor(Math.max(...maxy));
+    // 在这段代码中，minx是一个数组，包含一组数值。
 
+    // 首先，通过扩展运算符...将数组minx展开，将其中的每个元素作为参数传递给Math.min()函数。
+    
+    // Math.min(...minx)返回数组minx中的最小值。
+    
+    // 然后，Math.floor()函数将最小值向下取整为最接近的整数。
+    
+    // 最后，将取整后的最小值保存在变量minX中。
+    
+    // 综上所述，这段代码的作用是从一组数值中找到最小值，并将最小值向下取整为最接近的整数。在这里，它可能用于计算一组数值的最小边界或起始点的位置。
     const x = minX - 20;
     const y = minY + 10;
     const width = maxX - minX;
